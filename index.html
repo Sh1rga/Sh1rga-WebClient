@@ -86,9 +86,17 @@ location.reload();
 
 if (getParam('customserver') == null) {
   if (getParam('protocol') == "http") {
+  	if(location.href.indexOf("https://") >= 0) {
+  		var reurl = url.replace("https://", "http://");
+  		location.replace(reurl);
+	}
 	address_api = "http://sh1rgapi.tsg0o0.com";
 	document.getElementById('box').innerHTML = "<br>Having connection problems?<br><button onClick=\"ViewConnectionSetting();return false;\">Connection Setting</button>";
   }else if (getParam('protocol') == "tor") {
+  	if(location.href.indexOf("https://") >= 0) {
+  		var reurl = url.replace("https://", "http://");
+  		location.replace(reurl);
+	}
 	address_api = "http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion";
 	document.getElementById('box').innerHTML = "<br>Having connection problems?<br><button onClick=\"ViewConnectionSetting();return false;\">Connection Setting</button>";
   }else if (getParam('protocol') == "https") {
