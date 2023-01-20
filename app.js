@@ -108,18 +108,22 @@ async function msgMove() {
 var connected = false;
 const socket = io.connect( address_api );
 socket.on('connect',() => {
+  if (address_api != null) {
 	socketConnect = true;
 	sendCryptLoad();
     if (connected == false) {
     	connected = true;
     	langLoad();
 	}
+  }
 });
 
 socket.on('disconnect',() => {
+  if (address_api != null) {
 	socketConnect = false;
 	socketTime = 0;
 	socketTimeCounter();
+  }
 });
 
 function socketTimeCounter() {
@@ -184,11 +188,13 @@ var ThisIsStart = false;
 var appBox = document.getElementById('box');
 
 function startView() {
+  if (address_api != null) {
 	if (language == "ar") {
 	  appBox.innerHTML = '<h1 aria-label="Shirga Chat">Sh1rga Chat</h1><div class="setbox"><h2 style="margin:8px">' + langjson.startroom + '</h2><button onclick="sendStart();" style="margin-bottom:8px">' + langjson.start + '</button></div><br><div class="setbox"><h2 style="margin:8px">' + langjson.joinroom + '</h2><form action="" style="margin-bottom:8px"><input type="number" id="input" autocomplete="off" required maxlength="12" alt="' + langjson.entertheroomid + '" enterkeyhint="done" pattern="^[0-9]+$" aria-label="' + langjson.entertheroomid + '" style="border-radius:0 32px 32px 0" dir="ltr"><button type="submit" onClick="Button();return false;" style="border-radius:32px 0 0 32px;padding-right:14px">' + langjson.join + '</button></form></div><br><p>Ver: ' + version + '</p><p><a class="nobox" href="' + address_web + '/tos?lang=' + language + '" target="_blank" rel="noopener noreferrer">' + langjson.tos + '</a></p><p><button onclick="langSelectView();">Language</button></p>';
 	}else{
 	  appBox.innerHTML = '<h1 aria-label="Shirga Chat">Sh1rga Chat</h1><div class="setbox"><h2 style="margin:8px">' + langjson.startroom + '</h2><button onclick="sendStart();" style="margin-bottom:8px">' + langjson.start + '</button></div><br><div class="setbox"><h2 style="margin:8px">' + langjson.joinroom + '</h2><form action="" style="margin-bottom:8px"><input type="number" id="input" autocomplete="off" required maxlength="12" alt="' + langjson.entertheroomid + '" enterkeyhint="done" pattern="^[0-9]+$" aria-label="' + langjson.entertheroomid + '"><button type="submit" onClick="Button();return false;" style="border-radius:0 32px 32px 0;padding-left:14px">' + langjson.join + '</button></form></div><br><p>Ver: ' + version + '</p><p><a class="nobox" href="' + address_web + '/tos?lang=' + language + '" target="_blank" rel="noopener noreferrer">' + langjson.tos + '</a></p><p><button onclick="langSelectView();">Language</button></p>';
 	}
+  }
 }
 
 function langSelectView() {
