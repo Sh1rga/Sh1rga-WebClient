@@ -242,3 +242,10 @@ width:calc(95% - 26px);
 }
 }
 @media print{*{opacity:0%}}
+.cstmserverinput{
+width:360px;
+border-radius:32px;
+}
+@media only screen and (max-width:420px){
+.cstmserverinput{width:calc(100% - 50px)}
+}

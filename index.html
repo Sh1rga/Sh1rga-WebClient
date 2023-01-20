@@ -95,7 +95,7 @@ if (getParam('customserver') == null) {
 	address_api = "https://sh1rgapi.tsg0o0.com";
 	document.getElementById('box').innerHTML = "<br>Having connection problems?<br><button onClick=\"ViewConnectionSetting();return false;\">Connection Setting</button>";
   }else{
-	document.getElementById('box').innerHTML = '<br><div class="setbox"><br><strong>Select the communication protocol.</strong><br><br><button onclick="UseHTTPS();">Use HTTPS</button><br><br><button onclick="UseTor();">Use Tor</button><br><br><button onclick="UseHTTP();">Use HTTP (deprecated)</button><br><br></div><br>OR<br><br><strong>Custom Server</strong><br><input type="url" id="csaddress"  alt="Enter the custom server address" enterkeyhint="done" aria-label="Enter the custom server address" style="width:360px;border-radius:32px" dir="ltr"><br><button onClick="CSConnect();return false;" style="border-radius:0 0 16px 16px;margin-top:-7px">Connect</button>';
+	document.getElementById('box').innerHTML = '<br><div class="setbox"><br><strong>Select the communication protocol.</strong><br><br><button onclick="UseHTTPS();">Use HTTPS</button><br><br><button onclick="UseTor();">Use Tor</button><br><br><button onclick="UseHTTP();">Use HTTP (deprecated)</button><br><br></div><br>OR<br><br><strong>Custom Server</strong><br><input type="url" id="csaddress"  alt="Enter the custom server address" enterkeyhint="done" aria-label="Enter the custom server address" class="cstmserverinput" dir="ltr"><br><button onClick="CSConnect();return false;" style="border-radius:0 0 16px 16px;margin-top:-7px">Connect</button>';
   }
 }else{
   address_api = getParam('customserver');
