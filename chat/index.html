@@ -55,22 +55,18 @@ function getParam(name, url) {if (!url) url = window.location.href;name = name.r
 const url = new URL(window.location.href);
 function UseHTTPS(){
 if (getParam('lang') == null) {
-history.replaceState('','','?protocol=' + "https");
+location.replace("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion/chat/?protocol=https");
 }else{
-history.replaceState('','','?lang=' + getParam('lang') + '&protocol=' + "https");}
-location.reload();}
+location.replace("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion/chat/?lang=" + getParam('lang') + "&protocol=https");
+}
+}
 function UseTor(){
 if (getParam('lang') == null) {
-history.replaceState('','','?protocol=' + "tor");
+location.replace("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion/chat/?protocol=tor");
 }else{
-history.replaceState('','','?lang=' + getParam('lang') + '&protocol=' + "tor");}
-location.reload();}
-function UseHTTP(){
-if (getParam('lang') == null) {
-history.replaceState('','','?protocol=' + "http");
-}else{
-history.replaceState('','','?lang=' + getParam('lang') + '&protocol=' + "http");}
-location.reload();}
+location.replace("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion/chat/?lang=" + getParam('lang') + "&protocol=tor");
+}
+}
 
 function CSConnect(){
 if (getParam('lang') == null) {
@@ -85,17 +81,9 @@ location.reload();
 }
 
 if (getParam('customserver') == null) {
-  if (getParam('protocol') == "http") {
-  	if(location.href.indexOf("https://") >= 0) {
-  		var reurl = location.href.replace("https://", "http://");
-  		location.replace(reurl);
-	}
-	address_api = "http://sh1rgapi.tsg0o0.com";
-	document.getElementById('box').innerHTML = "<br>Having connection problems?<br><button onClick=\"ViewConnectionSetting();return false;\">Connection Setting</button>";
-  }else if (getParam('protocol') == "tor") {
-  	if(location.href.indexOf("https://") >= 0) {
-  		var reurl = location.href.replace("https://", "http://");
-  		location.replace(reurl);
+  if (getParam('protocol') == "tor") {
+  	if(location.href.indexOf("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion") >= 0) {
+  		location.replace("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion/chat/");
 	}
 	address_api = "http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion";
 	document.getElementById('box').innerHTML = "<br>Having connection problems?<br><button onClick=\"ViewConnectionSetting();return false;\">Connection Setting</button>";
@@ -103,7 +91,7 @@ if (getParam('customserver') == null) {
 	address_api = "https://sh1rgapi.tsg0o0.com";
 	document.getElementById('box').innerHTML = "<br>Having connection problems?<br><button onClick=\"ViewConnectionSetting();return false;\">Connection Setting</button>";
   }else{
-	document.getElementById('box').innerHTML = '<br><div class="setbox"><br><strong>Select the communication protocol.</strong><br><br><button onclick="UseHTTPS();">Use HTTPS</button><br><br><button onclick="UseTor();">Use Tor</button><br><br><button onclick="UseHTTP();">Use HTTP (deprecated)</button><br><br></div><br>OR<br><br><strong>Custom Server</strong><br><input type="url" id="csaddress"  alt="Enter the custom server address" enterkeyhint="done" aria-label="Enter the custom server address" class="cstmserverinput" dir="ltr"><br><button onClick="CSConnect();return false;" style="border-radius:0 0 16px 16px;margin-top:-7px">Connect</button>';
+	document.getElementById('box').innerHTML = '<br><div class="setbox"><br><strong>Select the communication protocol.</strong><br><br><button onclick="UseHTTPS();">Use HTTPS</button><br><br><button onclick="UseTor();">Use Tor</button><br><br></div><br>OR<br><br><strong>Custom Server</strong><br><input type="url" id="csaddress"  alt="Enter the custom server address" enterkeyhint="done" aria-label="Enter the custom server address" class="cstmserverinput" dir="ltr"><br><button onClick="CSConnect();return false;" style="border-radius:0 0 16px 16px;margin-top:-7px">Connect</button>';
   }
 }else{
   address_api = getParam('customserver');
