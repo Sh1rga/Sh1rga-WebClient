@@ -55,10 +55,11 @@ function getParam(name, url) {if (!url) url = window.location.href;name = name.r
 const url = new URL(window.location.href);
 function UseHTTPS(){
 if (getParam('lang') == null) {
-location.replace("http://sh1rgapi.tsg0o0.com/chat/?protocol=https");
+history.replaceState('','','?protocol=' + "https");
 }else{
-location.replace("http://sh1rgapi.tsg0o0.com/chat/?lang=" + getParam('lang') + "&protocol=https");
+history.replaceState('','','?lang=' + getParam('lang') + '&protocol=' + "https");
 }
+location.reload();
 }
 function UseTor(){
 if (getParam('lang') == null) {
