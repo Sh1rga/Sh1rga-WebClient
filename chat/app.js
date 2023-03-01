@@ -1,4 +1,4 @@
-var version = "0.3.8";
+var version = "0.3.9";
 var socketTime = 0;
 var socketConnect = false;
 var server_encrypt = "";
@@ -254,7 +254,12 @@ function loopfunc() {
 }
 
 function loadingView() {
+	appBox.innerHTML = '<p><strong>' + langjson.setenc + '</strong></p><p><button onclick="setEncBit(2048);">' + langjson.setenc2048 + '</button><br><button onclick="setEncBit(3072);">' + langjson.setenc3072 + '</button><br><button onclick="setEncBit(4096);">' + langjson.setenc4096 + '</button></p><p style="color:#aaa">' + langjson.setenchint + '</p>';
+}
+function setEncBit(strength) {
+	enc_bits = strength;
 	appBox.innerHTML = '<p><strong>' + langjson.nowloading + '</strong><br>' + langjson.loadingview1 + '<br>' + langjson.loadingview2 + '</p>';
+	window.setTimeout('preCrypt();',100);
 }
 
 function preCrypt() {
@@ -287,14 +292,12 @@ function joinCryptSuc() {
 function sendStart() {
 	ThisIsStart = true;
 	loadingView();
-	window.setTimeout('preCrypt();',100);
 }
 
 function sendJoin() {
 	roomID = $( '#input' ).val();
 	ThisIsStart = false;
 	loadingView();
-	window.setTimeout('preCrypt();',100);
 }
 
 function sendLoad() {
