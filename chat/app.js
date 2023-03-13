@@ -106,7 +106,7 @@ async function msgMove() {
 }
 
 var connected = false;
-const socket = io.connect( address_api );
+const socket = io.connect( address_api , { transports : ['websocket'] } );
 socket.on('connect',() => {
   if (address_api != null) {
 	socketConnect = true;
