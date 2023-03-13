@@ -67,8 +67,7 @@ function settinglangset() {
 	"notconnect30_1" : "Connection to server failed.",
 	"notconnect30_2" : "Please try again after a while.",
 	
-	"setting" : "Settings",
-	"tos" : "By using Sh1rga, you agree to Sh1rga Terms of Service."
+	"setting" : "Settings"
 		}
 	}else if (language == "ja") {
 		langjson = {
@@ -138,8 +137,7 @@ function settinglangset() {
 	"notconnect30_1" : "サーバーとの接続に失敗しました。",
 	"notconnect30_2" : "しばらくしてから再度お試しください。",
 	
-	"setting" : "設定",
-	"tos" : "Sh1rgaを利用すると、利用規約に同意したとみなされます。"
+	"setting" : "設定"
 		}
 	}else if (language == "tok") {
 		langjson = {
@@ -209,8 +207,7 @@ function settinglangset() {
 	"notconnect30_1" : "toki lon jan pali pi pana li pakala.",
 	"notconnect30_2" : "o tawa awen toki lon jan pali pi pana.",
 	
-	"setting" : "ante e ken",
-	"tos" : "sina kepeken e ilo Sh1rga la sina pilin sama e Sh1rga ken lawa."
+	"setting" : "ante e ken"
 		}
 	}else if (language == "ru") {
 		langjson = {
@@ -280,8 +277,7 @@ function settinglangset() {
 	"notconnect30_1" : "Подключение к серверу не удалось.",
 	"notconnect30_2" : "Пожалуйста, повторите попытку через некоторое время.",
 	
-	"setting" : "Настройка",
-	"tos" : "Используя Sh1rga, вы соглашаетесь с Условиями обслуживания Sh1rga."
+	"setting" : "Настройка"
 		}
 	}else if (language == "cn") {
 		langjson = {
@@ -351,8 +347,7 @@ function settinglangset() {
 	"notconnect30_1" : "与服务器的连接失败。",
 	"notconnect30_2" : "请稍后再试。",
 	
-	"setting" : "设置",
-	"tos" : "通过使用Sh1rga，您同意Sh1rga的服务条款。"
+	"setting" : "设置"
 		}
 	}else if (language == "tw") {
 		langjson = {
@@ -422,8 +417,7 @@ function settinglangset() {
 	"notconnect30_1" : "連接服務器失敗。",
 	"notconnect30_2" : "請稍後再試。",
 
-	"setting" : "設定",
-	"tos" : "使用 Sh1rga 即表示您同意 Sh1rga 服務條款。"
+	"setting" : "設定"
 		}
 	}else if (language == "ar") {
 	langjson = {
@@ -493,8 +487,7 @@ function settinglangset() {
 	"notconnect30_1" : "فشل الاتصال بالخادم.",
 	"notconnect30_2" : "يرجى المحاولة مرة أخرى بعد فترة.",
 	
-	"setting" : "الإعدادات",
-	"tos" : "باستخدام Sh1rga ، فإنك توافق على شروط خدمة Sh1rga."
+	"setting" : "الإعدادات"
 		}
 	}else if (language == "es") {
 		langjson = {
@@ -564,9 +557,8 @@ function settinglangset() {
 	"notconnect30_1" : "La conexión con el servidor ha fallado.",
 	"notconnect30_2" : "Por favor, inténtelo de nuevo después de un tiempo.",
 	
-	"setting" : "Ajustes",
-	"tos" : "Al utilizar Sh1rga, aceptas las condiciones de servicio de Sh1rga."
-		}
+	"setting" : "Ajustes"
+			}
 	}else if (language == "pt") {
 		langjson = {
 	"startroom" : "Comece uma sala",
@@ -635,8 +627,7 @@ function settinglangset() {
 	"notconnect30_1" : "A ligação ao servidor falhou.",
 	"notconnect30_2" : "Por favor, tente novamente após algum tempo.",
 	
-	"setting" : "Ajustes",
-	"tos" : "Ao utilizar o Sh1rga, concorda com os Termos de Serviço do Sh1rga."
+	"setting" : "Ajustes"
 		}
 	}else if (language == "fr") {
 		langjson = {
@@ -706,8 +697,7 @@ function settinglangset() {
 	"notconnect30_1" : "La connexion au serveur a échoué.",
 	"notconnect30_2" : "Veuillez réessayer après un certain temps.",
 	
-	"setting" : "Réglages",
-	"tos" : "En utilisant Sh1rga, vous acceptez les conditions de service de Sh1rga."
+	"setting" : "Réglages"
 		}
 	}else if (language == "de") {
 		langjson = {
@@ -777,8 +767,7 @@ function settinglangset() {
 	"notconnect30_1" : "Verbindung zum Server fehlgeschlagen.",
 	"notconnect30_2" : "Bitte versuchen Sie es nach einer Weile erneut.",
 	
-	"setting" : "Einstellungen",
-	"tos" : "Durch die Nutzung von Sh1rga erklären Sie sich mit den Nutzungsbedingungen von Sh1rga einverstanden."
+	"setting" : "Einstellungen"
 		}
 	}else if (language == "ko") {
 		langjson = {
@@ -848,8 +837,7 @@ function settinglangset() {
 	"notconnect30_1" : "서버 연결에 실패했습니다.",
 	"notconnect30_2" : "잠시 후 다시 시도해 주세요.",
 
-	"setting" : "설정",
-	"tos" : "Sh1rga를 사용하면 이용약관에 동의한 것으로 간주됩니다."
+	"setting" : "설정"
 		}
 	}
 if (language == "cn") {
