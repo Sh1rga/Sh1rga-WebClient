@@ -83,7 +83,7 @@ location.reload();
 
 if (getParam('customserver') == null) {
   if (getParam('protocol') == "tor") {
-  	if(location.href.indexOf("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion") >= 0) {
+  	if(location.href.indexOf("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion") < 0) {
   		location.replace("http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion/chat/");
 	}
 	address_api = "http://sh1rgapi.tsg4o4zjaknpkbefs2k47a7emkl54moz2t2k4py4gbyhz6v7vubsjbad.onion";
