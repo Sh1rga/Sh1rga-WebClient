@@ -92,7 +92,7 @@ if (getParam('customserver') == null) {
 	address_api = "https://sh1rgapi.tsg0o0.com";
 	document.getElementById('box').innerHTML = "<br>Having connection problems?<br><button onClick=\"ViewConnectionSetting();return false;\">Connection Setting</button>";
   }else{
-	document.getElementById('box').innerHTML = '<br><div class="setbox"><br><strong>Select the communication protocol.</strong><br><br><button onclick="UseHTTPS();">Use HTTPS</button><br><br><button onclick="UseTor();">Use Tor</button><br><br></div><br>OR<br><br><strong>Custom Server</strong><br><input type="url" id="csaddress"  alt="Enter the custom server address" enterkeyhint="done" aria-label="Enter the custom server address" class="cstmserverinput" dir="ltr"><br><button onClick="CSConnect();return false;" style="border-radius:0 0 16px 16px;margin-top:-7px">Connect</button>';
+	document.getElementById('box').innerHTML = '<br><div class="setbox"><br><strong>Select the communication protocol.</strong><br><br><button onclick="UseHTTPS();">Use HTTPS</button><br><br><button onclick="UseTor();">Use Tor</button><br><br></div><br>OR<br><br><strong>Custom Server</strong><br><input type="url" id="csaddress"  alt="Enter the custom server address" enterkeyhint="done" aria-label="Enter the custom server address" class="cstmserverinput" dir="ltr"><br><button onClick="CSConnect();return false;" style="border-radius:0 0 16px 16px;margin-top:-7px">Connect</button><br><br><span style="color:#888;font-size:90%">To connect to a non-HTTPS server, you must use the Onion website or use the local version.<br>Access from HTTPS to HTTP is not permitted for security reasons.</span>';
   }
 }else{
   address_api = getParam('customserver');
